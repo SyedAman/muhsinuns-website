@@ -1,16 +1,37 @@
-// // Make an array.
-// const foods = ["Chocolate milkshake", "Apples", "Banana smoothie"];
+const content = {
+  navbarTitle: "Portfolio",
+  navbarElements: ["Home", "About Me", "Projects"],
+  navbarElementDestinations: [
+    "https://www.google.com/",
+    "https://www.youtube.com/",
+    "#"
+  ],
+  footerTitle: "Portfolio",
+  footerLinks: ["GitHub", "LinkedIn"],
+  footerLinkDestinations: [
+    "https://github.com/MuhsinunCool",
+    "https://www.linkedin.com/in/muhsinun-chowdhury-95737a136/"
+  ]
+};
 
-// // Loop through the array using a for loop and log every food.
-// for (const foods = 6; foods == 'Banana smoothie') {
-//   console.log(foods);
-// }
+const app = document.getElementById("app");
+const navbar = document.getElementById("navbar");
 
-document.getElementById("app").innerHTML = `
-<h1>Portfolio</h1>
-div>
-  Look
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>
-  for more info about Parcel.
-</div>
+let navbarContents = "";
+
+// Display navbar items with destinations.
+for (let i = 0; i < content.navbarElements.length; i++) {
+  navbarContents += `
+    <a href="${content.navbarElementDestinations[i]}">
+      ${content.navbarElements[i]}
+    </a>
+  `;
+  if (i !== content.navbarElements.length - 1) {
+    navbarContents += " | ";
+  }
+}
+navbar.innerHTML = navbarContents;
+
+app.innerHTML = `
+<h1>${content.navbarTitle}</h1>
 `;
