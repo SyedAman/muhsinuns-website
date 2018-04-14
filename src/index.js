@@ -6,12 +6,6 @@
 //   console.log(foods);
 // }
 
-const test = "Hi";
-
-for (let count = 0; count === 10; count++) {
-  console.log(test);
-}
-
 document.getElementById("app").innerHTML = `
 <h1>Portfolio</h1>
 div>
