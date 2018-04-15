@@ -30,7 +30,11 @@ for (let i = 0; i < content.navbarElements.length; i++) {
     navbarContents += " | ";
   }
 }
-navbar.innerHTML = navbarContents;
+navbar.innerHTML = `
+  <nav>
+    ${navbarContents}
+  </nav>
+`;
 
 app.innerHTML = `
 <h1>${content.navbarTitle}</h1>
